@@ -1,0 +1,62 @@
+
+menu{
+    height: 80px;
+    background: teal;
+    text-align: center;
+    text-decoration: none;
+    margin: auto;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.banner{
+    height: 400px;
+    width: 0 auto;
+    background-image: url(../12.jfif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.banner h3{
+    color: rgb(247, 242, 242);
+    font-weight: 800;
+    text-align: center;
+    font-size: 100px;
+}
+
+.about_us{
+    height: 200px;
+    width: 90%;
+    overflow: hidden;
+    
+}
+.column{
+    width: 45%;
+    float: left;
+    border: 1px solid teal;
+    border-radius: 3px 30px;
+}
+
+.footer{
+    height: 250px;
+    background: teal;
+}
+.column{
+    float: left;
+    width: 30%;
+}
+.column h3{
+    color: white;
+    font-weight: 600;
+    font-family: 'Times New Roman', Times, serif;
+}
+.column form button{
+    border:1px solid red;
+    color: blue;
+    font-weight: 500;
+    border-radius: 3px 15px;
+    transition: 0.15s;
+}
+.column form button:hover{
+    background: rgb(113, 249, 113);
+}
