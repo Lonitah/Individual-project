@@ -3,65 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quality education</title>
+    <title>Quality Education</title>
     <link rel="stylesheet" href="/images/css/style.css">
+   
 </head>
 <body>
-    <menu>
-        <br>
-        <a href="">Home</a>
-        <a href="">About Us</a>
-        <a href="">Why Us</a>
-        <a href="">Contact Us</a>
-    </menu>
-    <div class="banner">
-        <h3>Quality  Education In Uganda</h3>
-    </div>
-    <br>
-    <div class="about_us">
-        <div class="column">
-            <h3>This section is for image</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus perferendis dolorem, facilis illum fugiat blanditiis fuga perspiciatis impedit 
-                accusamus quis libero obcaecati omnis id vel distinctio error! Perspiciatis, quasi! Nam.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet voluptate ut voluptatem eos quaerat nemo fugit, in iure sint hic quas pariatur? Ducimus libero placeat eum minima nihil harum suscipit?</p>
+    <nav_bar>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </nav_bar>
+
+    <section id="home">
+        <div class="container">
+            <h1>Welcome to Quality Education</h1>
+            <div class="slider">
+                <div class="slide">
+                    <img src="/images/12.jfif" alt="Education slide 1">
+                </div>
+                <div class="slide" style="left: 100%;">
+                    <img src="/images/124.jfif" alt="Education slide 2">
+                </div>
+                <div class="slide" style="left: 200%;">
+                    <img src="/images/12.jfif" alt="Education slide 3">
+                </div>
+            </div>
+            <p>Empowering students through innovative learning experiences.</p>
+            <a href="#about" class="btn">Learn More</a>
         </div>
-        <div class="column">
-            <h3>This section is for content</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum alias dolor eveniet possimus! Accusamus fuga similique facilis quo modi. Ullam libero 
-                obcaecati ad eaque blanditiis minus dignissimos corrupti dolores deserunt.</p>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>Quality Education was founded in 2010 with a vision to revolutionize the learning experience. We are a team of dedicated educators, innovators, and lifelong learners committed to providing the best educational resources and support to our students.</p>
+            <h3>Our Values</h3>
+            <ul>
+                <li>Excellence: We strive for the highest standards in everything we do.</li>
+                <li>Innovation: We embrace new technologies and teaching methods to enhance learning.</li>
+                <li>Inclusivity: We believe in equal access to quality education for all.</li>
+                <li>Continuous Improvement: We are always learning and evolving to meet the needs of our students.</li>
+            </ul>
+            <img src="/images/557.png" alt="Our team">
         </div>
-    </div>
-    <br>
-    <br>
+    </section>
+
+    <section id="blog">
+        <div class="container">
+            <h2>Our Blog</h2>
+            <div class="blog-post">
+                <h3>The Importance of Lifelong Learning</h3>
+                <p>Published on: May 15, 2024</p>
+                <img src="/images/557.png"alt="Lifelong learning">
+                <p>In today's rapidly changing world, the concept of lifelong learning has become more important than ever. This post explores the benefits of continuous education and provides tips on how to cultivate a lifelong learning mindset.</p>
+                <a href="#" class="btn">Read more</a>
+            </div>
+            <div class="blog-post">
+                <h3>5 Innovative Teaching Methods to Engage Students</h3>
+                <p>Published on: April 28, 2024</p>
+                <img src="/images/557.png" alt="Innovative teaching">
+                <p>Discover five cutting-edge teaching methods that are transforming classrooms and improving student engagement. From project-based learning to gamification, these techniques are reshaping the educational landscape.</p>
+                <a href="#" class="btn">Read more</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <input type="submit" value="Send Message">
+            </form>
+        </div>
+    </section>
+
     <footer>
-        <div class="footer">
-            <div class="column">
-                <h3>Usefull Link</h3>
-                <ul>
-                    <li>Home</li>
-                    <li>About Us</li>
-                    <li>Contact us</li>
-                </ul>
-            </div>
-            <div class="column">
-                <h3>Contact us</h3>
-                <ul>
-                    <li> Tel: +234 6578 7868</li>
-                    <li>Email: qulityeducation@gmail.com</li>
-                    <li>Location: PortBell, Plot 1</li>
-                </ul>
-            </div>
-            <div class="column">
-                <h3>Subscribe for our newsletter</h3>
-                <form action="">
-                    <input type="text" placeholder="email">
-                    <button>Subscribe</button>
-                </form>
-            </div>
-            
-        </div>
-     
+        <p>&copy; 2024 Quality Education. All rights reserved.</p>
     </footer>
-    
+
+    <script>
+        // Simple slider functionality
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function showSlides() {
+            slideIndex++;
+            if (slideIndex >= slides.length) {
+                slideIndex = 0;
+            }
+            
+            slides.forEach((slide, index) => {
+                slide.style.left = `${(index - slideIndex) * 100}%`;
+            });
+
+            setTimeout(showSlides, 5000); // Change slide every 5 seconds
+        }
+
+        showSlides();
+    </script>
 </body>
 </html>
